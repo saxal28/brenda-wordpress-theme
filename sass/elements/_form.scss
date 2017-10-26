@@ -1,0 +1,26 @@
+@import "../"
+
+input[type=text], textarea {
+  width: 60%;
+  max-width: 250px;
+  margin: 10px auto;
+  border-radius: 0px !important;
+  border: 1px solid lightgrey !important;
+  color: #333 !important;
+  background: white !important;
+
+  font-family: $body-font;
+
+  &:focus {
+    outline:none;
+  }
+
+}
+
+label {
+  color: white;
+}
+
+.control-label {
+  color: white;
+}

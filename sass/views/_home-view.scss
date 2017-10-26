@@ -1,0 +1,23 @@
+.home-grid {
+  width: 100%;
+  height: 100%;
+
+  .hero-col {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.content-container {
+  // transform: translateY(-250px);
+  background: transparent;
+  color: #333;
+  // margin-bottom: -240px;
+}
+
+.grid_sm-1 {
+  margin-left: -5px !important;
+  margin-right: -5px !important;
+}

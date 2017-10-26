@@ -1,0 +1,6 @@
+@mixin mobile-height {
+  @include respond-to($phone) {
+    height: auto !important;
+    padding: 120px 20px;
+  }
+}

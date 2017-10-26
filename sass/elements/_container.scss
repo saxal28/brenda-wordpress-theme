@@ -1,0 +1,19 @@
+@import "../mixins/media-query.scss";
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content-container {
+  margin: 10px auto;
+  @include respond-to($phone) {
+    margin: 0 auto !important;
+  }
+}
+
+.button-row {
+  text-align: center;
+  margin: 30px auto;
+}

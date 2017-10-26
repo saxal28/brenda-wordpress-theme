@@ -1,0 +1,57 @@
+@import "../mixins/media-query.scss";
+
+.hero {
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.5) !important;
+  background-blend-mode: multiply;
+
+  position: relative;
+
+  &.transparent {
+    background: transparent !important;
+  }
+
+  &.margin_10 {
+    margin: 10px;
+  }
+
+  @include mobile-height;
+
+}
+
+
+  .height_30 {
+    height: 30vh;
+  }
+
+  .height_60 {
+    height: 60vh;
+  }
+
+  .height_80 {
+    height: 80vh;
+  }
+
+  .height_90 {
+    height: 90vh;
+  }
+
+  .height_100 {
+    height: 100vh;
+    overflow:hidden;
+  }
+
+  .height_auto {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }

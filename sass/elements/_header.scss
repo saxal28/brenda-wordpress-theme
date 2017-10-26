@@ -1,0 +1,73 @@
+@import "../mixins/media-query";
+$primary-hover: "red";
+$primary: "blue";
+
+.navbar {
+
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// padding: 40px;
+
+	height: 10vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 100;
+
+	background: rgba(0,0,0,0.5);
+
+	margin-bottom: 10px;
+
+	@include respond-to($phone) {
+
+		margin-bottom: 0;
+
+	};
+
+	#primary-menu {
+		width: 100%;
+		padding-top:30px;
+		max-width: 945px;
+		margin: 0 auto;
+
+		display: flex;
+		justify-content: center;
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+
+			.page_item {
+				display: inline;
+				margin: 10px;
+
+				a {
+					text-decoration: none;
+					color: white;
+					font-family: $body-font;
+					padding-bottom: 5px;
+
+					&:hover {
+						border-bottom: 2px solid $primary-color;
+					}
+
+				}
+
+			}
+
+			.current_page_item {
+				a {
+					color: $primary-color;
+					border-bottom: 2px solid $primary-color;
+				}
+			}
+
+		}
+
+	}
+
+}

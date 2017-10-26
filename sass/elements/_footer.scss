@@ -1,0 +1,47 @@
+@import "../mixins/media-query";
+
+.footer {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+
+  .footer-category {
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+  }
+
+  .footer-text {
+    margin: 0;
+    display:block;
+    text-decoration: none;
+    line-height: 1.6;
+  }
+
+  .social-media-row {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+	  margin: 15px 0;
+
+
+    img { margin-left: 15px }
+
+  }
+
+  .col-8_sm-12 {
+    text-align:right;
+    align-items: flex-end;
+
+	  @include respond-to($tablet-portrait) {
+		  .footer-category, .footer-watermark { text-align: center }
+		  .social-media-row { justify-content: center }
+		  justify-content: center;
+	  }
+
+    .footer-text { max-width: none }
+
+  }
+
+}
