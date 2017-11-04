@@ -1,15 +1,28 @@
 @import "../mixins/media-query.scss";
 
+.card-row {
+  display:flex;
+  flex-direction: row;
+  margin-top: 20px;
+  z-index: 10  ;
+
+  @include respond-to($phone){
+    display: none;
+  }
+
+}
+
 .card {
 
-    height: 250px;
+    height: 200px;
+    width:200px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    background-color: rgba(0,0,0,0.5);
+    background-color: $grey;
     background-size: cover !important;
     background-position: top !important;
     background-blend-mode: overlay !important;
@@ -17,9 +30,8 @@
     transition: all 400ms ;
 
     padding: 15px;
-    margin: 0px 5px 10px 5px;
+    margin: 10px;
 
-    // box-shadow: 0px 5px 40px rgba(0,0,0,0.5);
 
     @include respond-to($phone) { margin: 0 }
 
@@ -29,6 +41,16 @@
 
     &:hover {
         background-color: deepskyblue !important;
+    }
+
+    .card-title {
+      font-size: 25px;
+      font-family: $headline-font;
+      margin: 10px auto;
+    }
+
+    .fa {
+      font-size: 25px;
     }
 
 }

@@ -11,8 +11,10 @@
 
   background-size: cover !important;
   background-repeat: no-repeat;
-  background-color: rgba(0,0,0,0.5) !important;
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
+  background-position: 50%;
+
+  min-height: 700px;
 
   position: relative;
 
@@ -24,13 +26,36 @@
     margin: 10px;
   }
 
+  .fa-arrow-down {
+    position: absolute;
+    font-size:25px;
+    bottom: 20px;
+    transition:all 400ms;
+    z-index:20;
+
+    &:hover {
+      font-size: 28px;
+    }
+  }
+
   @include mobile-height;
 
 }
 
 
+.full-width {
+  width: 100%;
+}
   .height_30 {
     height: 30vh;
+  }
+
+  .height_50 {
+    height: 40vh !important;
+    @include respond-to($tablet-portrait){
+      height: auto !important;
+      padding:45px auto;
+    }
   }
 
   .height_60 {
@@ -46,8 +71,13 @@
   }
 
   .height_100 {
-    height: 100vh;
+    height: 100vh !important;
     overflow:hidden;
+
+    @include respond-to($tablet-portrait){
+      height: auto !important;
+      padding:90px auto;
+    }
   }
 
   .height_auto {

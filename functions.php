@@ -123,6 +123,7 @@ function brenda_website_scripts() {
 
 	wp_enqueue_script( 'test', get_template_directory_uri() . '/js/parallax.js', array(), '20151215', true  );
 	wp_enqueue_script( 'calendar', get_template_directory_uri() . '/js/calendar.js', array(), '20151215', true  );
+	wp_enqueue_script( 'action', get_template_directory_uri() . '/js/actions.js', array(), '20151215', true  );
 
 	wp_enqueue_script( 'brenda-website-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
