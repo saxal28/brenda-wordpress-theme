@@ -1,17 +1,21 @@
+@import "../mixins/media-query";
+
 button {
 	padding: 15px 25px;
 	color: white;
 	border: 2px solid white;
 	background: transparent;
 	margin: 0 6px;
-	font-size: 12px;
+	font-size: 16px;
+	font-family: $button-font;
 	text-transform: uppercase;
-
-	font-family: $body-font;
-
 	cursor: pointer;
 
 	transition: all 200ms;
+
+	@include respond-to($phone) {
+		font-size: 14px;
+	}
 
 	&.active {
 		color: #333;
@@ -25,5 +29,20 @@ button {
 
 .button-row {
 	margin-top: 20px;
-	z-index:10px;
+	z-index:1;
+
+	&.dark {
+		button {
+			color: black;
+			border-color: black;
+			&.active {
+				color: white;
+				background: black;
+			}
+			&:hover {
+				background: black;
+				color: white;
+			}
+		}
+	}
 }

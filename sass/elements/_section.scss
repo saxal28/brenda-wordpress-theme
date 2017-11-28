@@ -1,5 +1,39 @@
+@import "../mixins/media-query.scss";
+@import "../mixins/helpers.scss";
+
 .section {
-  height: auto;
-  padding: 80px 0;
-  background-attachment: scroll !important;
+  height:100vh;
+  position: relative;
+
+  @include flex-center-center;
+  @include mobile-height;
+  @include background;
+
+  overflow-x: hidden;
+
+  &.alt-background {
+    background: crimson;
+    h1,p { color: white; }
+  }
+
+  &.pattern-background {
+    background: url(https://i.imgur.com/J51aNTF.png);
+    background-blend-mode: screen;
+    background-color: pink;
+
+  * {
+        color: #333;
+  }
+
+    button {
+      color: white;
+      border-color: white;
+
+  &:hover {
+        background: white;
+        color: #333;
+  }
+
+    }
+  }
 }

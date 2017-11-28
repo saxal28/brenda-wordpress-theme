@@ -6,16 +6,29 @@
   margin-top: 20px;
   z-index: 10  ;
 
-  @include respond-to($phone){
-    display: none;
-  }
+  width:950px;
+  height:400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  margin: 20px auto;
+
+  @include respond-to($tablet-portrait) {
+    width: 600px;
+  };
+
+  @include respond-to($phone) {
+    width: 300px;
+  };
 
 }
 
 .card {
 
-    height: 200px;
-    width:200px;
+    height: 400px;
+    width: 300px;
+    min-width: 300px;
 
     display: flex;
     justify-content: center;
@@ -53,4 +66,10 @@
       font-size: 25px;
     }
 
+}
+
+.character-card {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid lightgrey;
 }

@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Abel|La+Belle+Aurore|Holtwood+One+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Abel|Cabin+Sketch" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 	<?php wp_head(); ?>
@@ -42,7 +42,9 @@
 	<header id="masthead" class="side-nav closed">
 
 		<div class="navbar-toggle">
-			X
+			<div class="bar bar-1"></div>
+			<div class="bar bar-2"></div>
+			<div class="bar bar-3"></div>
 		</div>
 
 		<!-- <nav id="site-navigation" class="main-navigation"> -->

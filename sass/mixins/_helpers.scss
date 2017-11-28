@@ -4,3 +4,15 @@
     padding: 120px 20px;
   }
 }
+
+@mixin flex-center-center {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin background {
+  background-size: cover !important;
+  background-position: 50% !important;
+}

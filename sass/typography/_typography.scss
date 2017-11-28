@@ -1,14 +1,39 @@
-	body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
+@import "../mixins/media-query";
+@font-face {
+  font-family: 'Sofija';
+  src: url('Sofija.ttf') format('truetype');
+}
+// variables
+$hero-font: "Sofija", "Cabin Sketch";
+$sub-hero-font: "Sofija", "Cabin Sketch";
+$body-font: "Sofija", "Cabin Sketch";
+$button-font: "Abel", "sans-serif";
+$footer-font: "Abel", 'sans-serif';
+$regular-font: "Abel", 'sans-serif';
+
+h1 {
+  font-family: $hero-font;
+  text-align: center;
+  max-width: 700px;
+  margin: 40px auto;
+  font-size: 85px;
+  line-height: 95px;
+  z-index: 1;
+  @include respond-to($phone) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
-@import "headings";
-@import "copy";
+p {
+  font-family: $body-font;
+  font-size: 25px;
+  line-height: 35px;
+  max-width: 700px;
+  margin: 40px auto;
+  z-index: 1;
+  @include respond-to($phone) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

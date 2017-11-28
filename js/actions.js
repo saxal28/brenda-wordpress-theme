@@ -19,16 +19,30 @@
 
   $(".fa-arrow-down").click(function(){
 
-    var scrollPoint = $('#scroll-to-section').offset().top
-
-      if ($(window).width() < 1000) {
-        scrollPoint = scrollPoint -= 90
-      }
-
-      $('html, body').animate({
-        scrollTop: scrollPoint
-      }, 400)
+    scrollToFirstSection($);
 
   })
 
+  $(window).scroll(function() {
+    if(document.body.scrollTop === 5) {
+      console.log('at the top');
+      scrollToFirstSection($);
+
+    } else {
+      console.log("scrolltop", document.body.scrollTop)
+    }
+    });
+
 }(jQuery))
+
+function scrollToFirstSection($){
+  var scrollPoint = $('#scroll-to-section').offset().top
+
+    if ($(window).width() < 1000) {
+      scrollPoint = scrollPoint -= 90
+    }
+
+    $('html, body').animate({
+      scrollTop: scrollPoint
+    }, 400)
+}

@@ -1,5 +1,14 @@
 .booknow-page {
-  .content-container {
-    max-width:800px;
+
+  @include respond-to($desktop) {
+    p { margin: 0 20px;}
+  }
+
+}
+
+
+.page-template-page-booknow {
+  .bar {
+    background: lightseagreen !important;
   }
 }

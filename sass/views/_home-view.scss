@@ -1,91 +1,37 @@
+@import "../mixins/media-query.scss";
+@import "../mixins/helpers.scss";
 
+.home-page {
 
-.home-page, .booknow-page {
+  .section > p {
+    margin-top: 0;
+  }
 
-  overflow-x: hidden;
+  .gallery-section {
 
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  // height: 100%;
+    h1 { color: white }
 
-  .grid {
+    .gallery-preview-container {
 
-    .card-col {
-      transition: all 400ms;
-      box-shadow: 0px 0px 7px rgba(0,0,0,0.6);
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
 
-      background-size: cover !important;
-      background-position: 50% !important;
+      .gallery-preview-item {
 
-      background-attachment: fixed !important;
-
-      @include respond-to($tablet-portrait) {
-        background-attachment: scroll !important;
-      };
-
-      &.hero {
-        height: 100vh;
-        min-height: 600px;
-        // background-attachment: fixed !important;
-        background-blend-mode: color-dodge;
-        background-color: rebeccapurple !important;
-
-        &:before {
-          background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.0) , rgba(0, 0, 0, 0.6));
-          top:0;left:0;right:0;bottom:0;
-          position:absolute;
-          content: "";
-        }
-
-        &.alt-background {
-          background-color: rgba(0,0,0,0.8) !important;
-        }
-
-        h1 {
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
+          @include background;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top:0;left:0;right:0;bottom:0;
+            background:rgba(0,0,0,0.5);
+          }
       }
-
-      &.section {
-        @extend .hero ;
-        height: 50vh;
-        background-color: initial !important;
-        background-attachment: scroll !important;
-
-        h1 {
-          font-size:35px;
-          line-height:55px;
-          width:80%;
-          text-transform: capitalize;
-        }
-
-        h2 {
-          // font-size:
-        }
-
-      }
-
-      &.clickable {
-        cursor:pointer;
-
-
-        &:hover {
-          background-color: deepskyblue !important;
-          background-blend-mode: overlay !important;
-        }
-
-      }
-
     }
 
-  };
+  }
 
 }

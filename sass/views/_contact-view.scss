@@ -1,0 +1,35 @@
+.contact-page {
+  .contact-grid {
+    max-width:960px;
+    width: 80%;
+    margin: 20px auto;
+
+    div.col-6_md-12:first-of-type {
+      padding-top:27px;
+    }
+
+    p {
+        font-family: $regular-font;
+    }
+
+    label {
+      color: #333;
+      font-size: 22px;
+      font-family: $regular-font;
+    }
+
+    input[type=submit] {
+      font-family: $regular-font;
+      color: white;
+      background: lightseagreen;
+      transition: all 300ms;
+
+    }
+
+    @include respond-to($desktop) {
+      p { margin: 0 20px;}
+    }
+
+
+  }
+}
