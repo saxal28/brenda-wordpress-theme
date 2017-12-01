@@ -5,6 +5,8 @@
   }
 
   input[type=text], select, textarea {
-    margin: initial !important;
+    // margin: initial !important;
+    height: auto !important;
+
   }
 }

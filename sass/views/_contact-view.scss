@@ -4,6 +4,12 @@
     width: 80%;
     margin: 20px auto;
 
+    @include respond-to($phone) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
     div.col-6_md-12:first-of-type {
       padding-top:27px;
     }
@@ -12,18 +18,29 @@
         font-family: $regular-font;
     }
 
+    h1 {
+
+      margin-top: 0px;
+
+    }
+
     label {
       color: #333;
-      font-size: 22px;
-      font-family: $regular-font;
+      font-size: 20px;
     }
 
     input[type=submit] {
       font-family: $regular-font;
       color: white;
-      background: lightseagreen;
+      background: white;
       transition: all 300ms;
+      width:100%;
+      background:lightseagreen;
 
+    }
+
+    textarea {
+      max-height: 200px;
     }
 
     @include respond-to($desktop) {
@@ -31,5 +48,11 @@
     }
 
 
+  }
+}
+
+.page-template-page-contact {
+  .bar {
+    background: lightseagreen !important;
   }
 }

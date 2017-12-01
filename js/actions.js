@@ -26,10 +26,10 @@
   $(window).scroll(function() {
     if(document.body.scrollTop === 5) {
       console.log('at the top');
-      scrollToFirstSection($);
+      // scrollToFirstSection($);
 
     } else {
-      console.log("scrolltop", document.body.scrollTop)
+      // console.log("scrolltop", document.body.scrollTop)
     }
     });
 

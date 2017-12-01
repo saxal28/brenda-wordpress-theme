@@ -3,6 +3,19 @@
     height: auto !important;
     padding: 120px 20px;
     display: block;
-    background-size: contain !important;
+    background: #222 !important;
   }
+
+  .envira-gallery-item {
+    padding: 0 !important;
+  }
+
+  .entry-content {
+    margin-top: -40px;
+  }
+
+  .envira-gallery-wrap .envira-gallery-public {
+      margin: 0;
+  }
+
 }

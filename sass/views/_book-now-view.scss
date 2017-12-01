@@ -1,7 +1,50 @@
 .booknow-page {
 
+  .bk_calendar_frame  {
+    width: auto !important;
+
+    .calendar-links {
+      background: none !important;
+      background-color: lightseagreen !important;
+      * {
+        color: white !important; text-shadow: none;
+      }
+    }
+    .datepick-header {
+      * { color: white; text-shadow: none; font-family: $button-font; font-size: 13px; }
+
+    }
+  }
+
   @include respond-to($desktop) {
     p { margin: 0 20px;}
+  }
+
+  .booking_form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  button {
+    color: white !important;
+    border: none !important;
+    transition: all 300ms;
+    background:lightseagreen !important;
+    text-transform: uppercase !important;
+    width: 100%;
+    border-radius: 0px !important;
+    padding: 15px 25px !important;
+    font-weight: 200 !important;
+    font-family: $button-font !important;
+    text-shadow: none !important;
+  }
+
+  .form-group {
+    width: 100%;
+    input.input-xlarge, textarea {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
   }
 
 }

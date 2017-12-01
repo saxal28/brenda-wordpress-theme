@@ -57,20 +57,16 @@
 		left:0;
 		top: 0;
 		bottom: 0;
-		width:250px;
+		width:146px;
 		background:#333;
 		transition: all 300ms ease-in-out;
 
-		@include respond-to($phone){
-			// width:200px;
-		}
-
 		.navbar-toggle {
-			height: 80px;
-			width:80px;
-			position:absolute;
+			height: 60px;
+			width:60px;
+			position:fixed;
 			top:0;
-			right: -80px;
+			left: 0;
 
 			display: flex;
 			justify-content: center;
@@ -78,6 +74,7 @@
 			font-size: 45px;
 			font-weight:bold;
 			flex-direction: column;
+			z-index: 100;
 
 			cursor: pointer;
 
@@ -88,17 +85,14 @@
 			}
 
 			.bar {
-				height: 3px;
-				width: 35px;
     		margin: 3px auto;
 				background: white;
 				display: block;
 				transition: all 400ms ease-in-out;
 
-				@include respond-to($phone){
-					height: 1px;
-    			width: 27px;
-				}
+				height: 1px;
+    		width: 27px;
+
 
 			}
 
@@ -106,6 +100,10 @@
 
 		&.closed {
 			transform: translateX(-250px);
+			.navbar-toggle {
+				left: initial;
+				right: -160px;
+			}
 		}
 
 		&.open {
@@ -139,21 +137,68 @@
 
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			// align-items: center;
 			flex-direction: column;
 			position: relative;
 
+			margin-left: 20px;
+
 			transition: all 300ms;
 
-			li {
-				 margin: 10px auto 1px;
+			// home
+			li:first-of-type{
+				a::before {
+					content: "\f015";
+					font-family: FontAwesome;
+					margin-right: 20px;
+				}
+			}
+			// book now
+			li:nth-child(2){
+				a::before {
+					content: "\f02d";
+					font-family: FontAwesome;
+					margin-right: 20px;
+				}
+			}
+			// contact
+			li:nth-child(3){
+				a::before {
+					content: "\f003";
+					font-family: FontAwesome;
+					margin-right: 20px;
+				}
+			}
+			// characters
+			li:nth-child(4){
+				a::before {
+					content: "\f0c0";
+					font-family: FontAwesome;
+					margin-right: 20px;
+				}
+			}
+			// gallery
+			li:last-of-type{
+				a::before {
+					content: "\f03e";
+					font-family: FontAwesome;
+					margin-right: 20px;
+				}
+			}
+			// pricing -- TODO: add pricing page
+
+
+			li.menu-item {
+				 margin: 10px 0 1px;
 				 padding-bottom: 5px;
-				  &.current_page_item > a { color: lightseagreen }
+				 &:hover > a { color: white !important }
+				  &.current_page_item > a { color: lightseagreen !important }
 
 				a {
 					text-decoration: none;
-					font-family: $body-font;
-					color: white;
+					font-family: $button-font;
+					color: grey;
+
 				}
 
 			}

@@ -10,16 +10,9 @@
 
 <div class="character-page">
 
-    <div class="hero" style="background:url(<?php echo $gallery_background?>)" id="hero">
-      <h1>Characters</h1>
-      <div class="scroll-toggle">
-         <i class="fa fa-arrow-down"></i>
-      </div>
-    </div>
+    <div class="" style="min-height: 100vh">
 
-    <div class="section pattern-background">
-
-      <div class="content-container" id="scroll-to-section" >
+      <div class="grid grid-noGutter">
 
         <!-- get custom post type of character -->
         <?php $loop = new WP_Query(array(
@@ -29,16 +22,20 @@
 
         <?php while ( $loop -> have_posts() ) : $loop -> the_post(); ?>
 
-            <div class="character-card">
+          <div class="col-4_md-6_sm-12">
 
-                <div class="card-header">
-                  <img src="<?php the_field("character_image")?>" />
-                  <h1><?php the_field("character_name")?></h1>
+            <div class="character-card" style="background:url(<?php the_field("character_image")?>)">
+
+              <div class="overlay">
+                <div class="character-content">
+                    <h1><?php the_field("character_name")?></h1>
                 </div>
-                <p>
-                  <?php the_field('character_description')?>
-                </p>
+              </div>
+
             </div>
+
+          </div>
+
 
         <?php  endwhile; ?>
 
