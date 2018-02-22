@@ -1,0 +1,16 @@
+#page {
+  display: flex;
+}
+
+
+.fullscreen-slider {
+  background-position: 50% !important;
+  background-size: cover !important;
+  height: 100vh;
+}
+
+.site-content {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}

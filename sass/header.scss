@@ -1,0 +1,86 @@
+
+$black:  #232025;
+$primary-blue: #00aeef;
+
+
+#primary-menu {
+
+  padding: 0;
+
+}
+
+.side-nav {
+  background: $black;
+  height: 100vh;
+  width: 300px;
+  min-width: 300px;
+
+  position: relative;
+
+  ul {
+    width: 100%;
+    li {
+      list-style: none;
+      padding: 20px 0 20px 20px;
+      font-size: 18px;
+
+      hr {
+        width: 60px;
+        margin: 0;
+      }
+
+      &.current_page_item {
+        border-right: 6px solid $primary-blue;
+      }
+
+      &:hover {
+        border-right: 6px solid $primary-blue;
+      }
+
+      a {
+        color: $primary-blue;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .brand-title {
+
+    padding-top: 24px;
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+      color: $primary-blue;
+      font-weight: bold;
+    }
+
+    hr {
+      width: 60px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .brand-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+  .social-media-row {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    padding: 20px 30px;
+    justify-content:  space-around;
+
+  }
+
+}

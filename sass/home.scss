@@ -1,0 +1,12 @@
+.home-title {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background-color:  rgba(0,0,0,0.4);
+  margin: 0;
+  padding: 20px 10px;
+  z-index: 2;
+
+  color: $primary-blue;
+  user-select: none;
+  text-align: center;
+}

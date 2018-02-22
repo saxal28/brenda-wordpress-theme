@@ -1,19 +1,13 @@
 ( function($) {
 
-  console.log("parallax works!");
+   $(document).ready(function(){
 
-  // $(".bk_calendar_frame").click(function(){
-  //   console.log("clicked!")
-  // })
+     var swiper = new Swiper('.swiper-container', {
+       pagination: {
+         el: '.swiper-pagination',
+       },
+     });
+   }
 
-  $(".datepick-unselectable").click(function(){
-    console.log("click!");
-  })
-
-  $(".date_available").click(function(){
-    console.log("date available");
-  })
-
-  
 
 }(jQuery))

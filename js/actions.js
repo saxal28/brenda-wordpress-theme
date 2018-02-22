@@ -2,17 +2,20 @@
 
   console.log("actions work!");
   var navbar = $(".side-nav")
+  var content = $("#content");
 
   $('.navbar-toggle').click(function(){
     if(navbar.hasClass("open")) {
 
       navbar.removeClass("open")
       navbar.addClass("closed");
+      content.removeClass("navbar-open");
 
     } else if (navbar.hasClass("closed")) {
 
       navbar.removeClass("closed");
       navbar.addClass("open");
+      content.addClass("navbar-open");
 
     }
   })

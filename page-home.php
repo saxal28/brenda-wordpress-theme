@@ -42,118 +42,44 @@
 
  <div class="home-page">
 
-   <?php get_header(); ?>
+  <?php get_header(); ?>
 
-     <!-- start section 1 = hero -->
-     <!--  -->
+  <script>
+    jQuery(document).ready(function(){
+      var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true
+      })
+      jQuery('.arrow-left').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipePrev()
+      })
+      jQuery('.arrow-right').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipeNext()
+      })
+    })
+  </script>
 
-       <div class="hero"  id="hero" style="background:url(<?php echo $hero_background?>); background-color: <?php echo $hero_background_color?> ; background-blend-mode:<?php echo $hero_blend_mode?>;">
+  <div>
 
-        <h1><?php echo $hero_title?></h1>
-        <h2><?php echo $hero_subtitle?></h2>
+    <h1 class="home-title">Book A Princess Now!</h1>
 
-        <div class="scroll-toggle">
-           <i class="fa fa-arrow-down"></i>
-        </div>
+    <div class="swiper-container home-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background:url(https://i.imgur.com/NZSXkqm.jpg); background-size: cover; background-position: 50%">Slide 1</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
 
-       </div>
-
-     <!-- end section 1 = hero -->
-
-     <!-- start section 4 -->
-
-      <!-- //TODO maybe loop over all charcters? -->
-
-      <div class="section gallery-section characters-section">
-           <h1>View Characters</h1>
-           <a href="/characters">
-           <div class="gallery-preview-container grid grid-noGutter">
-
-             <div class="col-4 gallery-preview-item" style="background:url(<?php echo $character_preview_1?>">
-
-             </div>
-             <div class="col-4 gallery-preview-item" style="background:url(<?php echo $character_preview_2?>">
-
-             </div>
-             <div class="col-4 gallery-preview-item" style="background:url(<?php echo $character_preview_3?>">
-
-             </div>
-           </div>
-         </a>
-        </div>
+  </div>
 
 
-
-     <!-- end section 4 -->
-
-     <!-- start section 2 -->
-
-         <div class="section pattern-background" id='scroll-to-section'>
-
-           <h1><?php echo $section_2_title?></h1>
-           <p><?php echo $section_2_body?></p>
-           <!-- <div class="button-row dark">
-             <button type="button" name="button">Read More</button>
-             <button type="button" name="button">Visit Our Blog</button>
-           </div> -->
-         </div>
-
-     <!-- end section 2 -->
-
-     <!-- start section 3 -->
-
-
-       <div class="section gallery-section">
-            <h1>View Gallery</h1>
-            <a href="/gallery">
-              <div class="gallery-preview-container grid grid-noGutter">
-
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_1?>">
-
-              </div>
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_2?>">
-
-              </div>
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_3?>">
-
-              </div>
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_4?>">
-
-              </div>
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_5?>">
-
-              </div>
-              <div class="col-4 gallery-preview-item" style="background:url(<?php echo $gallery_preview_6?>">
-
-              </div>
-            </div>
-          </a>
-         </div>
-
-
-     <!-- end section 3 -->
-
-     <!-- start 5 -->
-
-
-     <div class="hero" id="hero" style="background:url(<?php echo $hero_background?>); background-color: <?php echo $hero_background_color?> ; background-blend-mode:<?php echo $hero_blend_mode?>;">
-         <h1><?php echo $section_5_title?></h1>
-         <p><?php echo $section_5_body?></p>
-         <div class="button-row">
-           <a href="/book-now"><button type="button" name="button">Book Now</button></a>
-           <a href="contact"><button type="button" name="button">Contact Us</button></a>
-         </div>
-       </div>
-
-
-     <!-- end section 5 -->
-
-
-   </div>
+  <?php get_footer(); ?>
 
  </div>
 
 <!-- Nam viverra ultricies neque, vel imperdiet nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare hendrerit nunc sed molestie. Integer vel tempus est, quis scelerisque ligula. Donec eget arcu sit amet purus iaculis ultrices. Ut molestie lectus quam, eget dapibus est faucibus et. Nunc eu ultricies lectus.  -->
-
-
-<?php get_footer(); ?>
